@@ -4,7 +4,7 @@ namespace SistemaBiblioteca.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string TaxId { get; set; }
+        public string TaxId { get; set; } // CNPJ
         public string Address { get; set; }
         public string Phone { get; set; }
         public string ContactEmail { get; set; }
