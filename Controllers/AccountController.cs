@@ -123,7 +123,7 @@ namespace SistemaBiblioteca.Controllers
                 return StatusCode(500, new ResultViewModel<string>("Falha ao salvar a imagem no servidor."));
             }
 
-            var user = await context.Users.FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
+            var user = await context.Users.FirstOrDefaultAsync(x => x.FullName == User.Identity.Name);
 
             if (user == null)
                 return NotFound(new ResultViewModel<User>("Usuario não encontrado"));

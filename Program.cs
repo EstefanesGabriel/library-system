@@ -20,11 +20,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 LoadingConfiguration(app);
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseResponseCompression();
-app.UseStaticFiles();
 app.MapControllers();
 if (app.Environment.IsDevelopment())
 {
